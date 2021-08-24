@@ -1,0 +1,12 @@
+policy:
+  phases:
+    warm:
+      min_age: 5d
+      actions:
+        forcemerge:
+          max_num_segments: 1
+    delete:
+      min_age: 60d
+      actions:
+        delete:
+          delete_searchable_snapshot: true
